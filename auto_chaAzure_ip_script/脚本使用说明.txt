@@ -1,0 +1,12 @@
+op重要说明：
+脚本核配置文件需要放在同一个目录，提前修改好增加或删除的.csv配置文件
+
+操作步骤
+1.使用administrator账号权限运行powershell
+2.在powershell连接azure，运行get-azurevm命令查看虚拟机，说明已经成功连上
+3.在powershell运行 set-executionpolicy remotesigned 更新策略
+4.在powershell运行:
+PS C:\20170316-script-ACLManagement> .\ManageACL.ps1 -operation Add
+##增加acl
+PS C:\20170316-script-ACLManagement> .\ManageACL.ps1 -operation Remove
+##删除acl
